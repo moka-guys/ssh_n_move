@@ -23,6 +23,6 @@ ssh.connect('host', username='user', password='password')
 stdin, stdout, stderr = ssh.exec_command('mv /path1/* /path2')
 # get stdout
 data = stdout.read()
-  print data
+print data
 # close connection
 client.close()
