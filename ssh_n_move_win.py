@@ -21,8 +21,5 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect('host', username='user', password='password')
 # send move command
 stdin, stdout, stderr = ssh.exec_command('mv /path1/* /path2')
-# get stdout
-data = stdout.read()
-print data
 # close connection
-client.close()
+ssh.close()
