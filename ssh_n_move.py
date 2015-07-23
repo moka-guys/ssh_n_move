@@ -4,15 +4,11 @@
 # therefore script is function but not finished
 
 import pxssh
-# import getpass
+
 try:
     s = pxssh.pxssh()
-    # hostname = raw_input('hostname: ')
-    # username = raw_input('username: ')
-    # password = getpass.getpass('password: ')
-    # s.login (hostname, username, password)
-    s.login("athena.kcl.ac.uk", "ryank", "password")
-    s.sendline('mv /gpfs/home/ryank/NGS_runs/testdir* /gpfs/home/ryank/NGS_runs/testdir2')   # run a command
+    s.login("host", "user", "password")
+    s.sendline('mv /path1/* /path2')   # run a command
     s.prompt()             # match the prompt
     print s.before          # print everything before the prompt.
     s.logout()
