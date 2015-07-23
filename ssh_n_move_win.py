@@ -18,8 +18,6 @@ ssh = paramiko.SSHClient()
 # auto accept host key without prompting and requiring response from a user
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 # connect to server
-# ssh.connect('athena.kcl.ac.uk', username='ryank', password='password')
-ssh.connect('5.2.65.31', port=400, username='wook', password='password')
+ssh.connect('host', username='user', password='password')
 # send move command
-# stdin, stdout, stderr = ssh.exec_command('mv /gpfs/home/ryank/NGS_runs/testdir2/* /gpfs/home/ryank/NGS_runs/testdir')
-stdin, stdout, stderr = ssh.exec_command('mv /home/wook/t1/* /home/wook/t2')
+stdin, stdout, stderr = ssh.exec_command('mv /path1/* /path2')
