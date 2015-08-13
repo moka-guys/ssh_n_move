@@ -4,12 +4,15 @@
 #
 # required modules: paramiko and pycrypto
 #
-# the later can apparently be a pain to install and so instead of installing python, have installed anaconda, then run:
+# the later can apparently be a pain to install and so instead of installing
+# python, have installed anaconda, then run:
 # conda install paramiko
 # conda install pycrytpo (although this should be installed automatically)
 #
 # todo: find a secure method for storing the password
 # todo: log successful mv
+# todo: (somewhat out of scope for this script) install syncback on secondary
+# machine and set up to run as a backup
 
 import paramiko
 
